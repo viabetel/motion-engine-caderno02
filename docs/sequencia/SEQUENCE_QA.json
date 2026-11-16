@@ -1,0 +1,24 @@
+{
+  "composicao": "CadernosC02Sequencia",
+  "canvas": { "width": 1080, "height": 1350, "fps": 30 },
+  "ordem": ["P1", "P2", "P3", "P3b", "P4", "P4b", "P5", "P5b", "P6"],
+  "arestas": ["B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8"],
+  "criterios": [
+    { "id": "S1", "area": "formato", "meta": { "fps": 30, "w": 1080, "h": 1350 } },
+    { "id": "S2", "area": "formato", "meta": { "gatilhosEstimadosNoFinal": 0 } },
+    { "id": "S3", "area": "encadeamento", "meta": { "arestasAprovadas": 8, "posesPorAresta": 4 } },
+    { "id": "S4", "area": "encadeamento", "meta": { "ordemExata": true } },
+    { "id": "S5", "area": "identidade", "meta": { "janela": [-12, 12], "desvioAncoraPxMesmoAsset": 2, "arestasMesmoAsset": ["B1", "B3", "B5", "B7"] } },
+    { "id": "S6", "area": "enquadramento", "meta": { "margemPx": 64 } },
+    { "id": "S7", "area": "enquadramento", "meta": { "saltoLuminanciaMax": 0.06, "quadrosPretos": 0 } },
+    { "id": "S8", "area": "movimento", "meta": { "toleranciaPicoQuadros": 2 } },
+    { "id": "S9", "area": "movimento", "meta": { "rastroMinPxPorQuadro": 25, "textoParadoBorrado": 0 } },
+    { "id": "S10", "area": "peso", "meta": { "pedraOvershootMax": 0.01, "papelAssentaQuadros": 14, "cameraChegadaPxPorQuadro": 0 } },
+    { "id": "S11", "area": "leitura", "meta": { "previa": [360, 450], "tituloParadoS": 0.9, "segPor10Palavras": 2.2 } },
+    { "id": "S12", "area": "voz", "meta": { "atrasoMaxS": 0.15, "palavrasCortadas": 0 } },
+    { "id": "S13", "area": "audio", "meta": { "lufs": -14, "tolerancia": 1, "picoRealDbtp": -1, "monoPerdaLU": 1.5 } },
+    { "id": "S14", "area": "audio", "meta": { "stoiMix": 0.85, "stoiCelular": 0.8 } },
+    { "id": "S15", "area": "determinismo", "meta": { "diferencaMax": 0 } },
+    { "id": "S16", "area": "reutilizacao", "meta": { "segundoTema": true, "diffComponentes": 0 } }
+  ]
+}

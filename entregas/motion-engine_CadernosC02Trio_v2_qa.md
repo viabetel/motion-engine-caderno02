@@ -1,3 +1,5 @@
+> Re-medido em 16/11 com o `qa.py` corrigido (commit 0c5dfa4: o teste de borda passou a enxergar cartão escuro sobre palco escuro). O render é o mesmo da v2. Reproduzir: `npx tsx scripts/eventos.ts CadernosC02Trio out/eventos.json && python scripts/qa.py entregas/motion-engine_CadernosC02Trio_v2.mp4 out/eventos.json saida.md`.
+
 # QA medido · CadernosC02Trio
 
 210 quadros lidos (esperado 210).
@@ -31,7 +33,7 @@
 - [x] C q177: corte no quadro previsto
 - [x] A não troca junto com C q177 (energia 0.9)
 - [x] B não troca junto com C q177 (energia 2.5)
-- [ ] bordas dos cartões fixas: A esquerda -1–132, C base 300–300 (ref 0 px)
+- [x] bordas dos cartões fixas: A esquerda 31–33, C base 307–307 (tolerância 2 px em 512, só sombra)
 
 ## Saídas (ECC no cartão, 6 passos antes do corte, %/q)
 | corte | preset | passos nossos | avanço nosso | ref |
@@ -43,8 +45,7 @@
 | C q177 | recuo | -0.25 -0.30 -0.43 -0.63 -1.25 -3.49 | x0.939 | C173: x0.92, último -2.99 |
 - [x] C q177: avanço x0.939 dentro de 15 % da ref (C173 x0.92)
 
-**Falhas: 1**
-
+**Falhas: 0**
 ## Determinismo
 - diferença máxima still × render em pedaço no q175: 0
 

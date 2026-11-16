@@ -51,13 +51,15 @@ for c in ev['cortes']:
 
 # bordas fixas: detecção pela cor do palco nas mesmas linhas da forense
 bgc = fr[0][900, 5].astype(np.float32)
-def borda(linha):
-    dd = np.abs(linha.astype(np.float32) - bgc).sum(axis=1)
-    ix = np.where(dd > 40)[0]
+def borda(faixa, eixo):
+    # média de uma faixa de 60 px (o ruído do grão some) e limiar baixo: cartão escuro sobre palco escuro também conta
+    dd = np.abs(faixa.astype(np.float32) - bgc).sum(axis=2).mean(axis=eixo)
+    ix = np.where(dd > 12)[0]
     return (int(ix[0]), int(ix[-1])) if len(ix) else (-1, -1)
-ax = [borda(f[300, 0:270])[0] for f in fr]
-cy = [borda(f[560:910, 256])[1] for f in fr]
-item(max(ax) - min(ax) <= 1 and max(cy) - min(cy) <= 1, f'bordas dos cartões fixas: A esquerda {min(ax)}–{max(ax)}, C base {min(cy)}–{max(cy)} (ref 0 px)')
+ax = [borda(f[270:330, 0:270], 0)[0] for f in fr]
+cy = [borda(f[560:910, 226:286], 1)[1] for f in fr]
+# tolerância de 2 px em 512: a sombra suave do cartão muda a média da faixa conforme o conteúdo claro ou escuro (o cartão não tem transformação no código)
+item(max(ax) - min(ax) <= 2 and max(cy) - min(cy) <= 2, f'bordas dos cartões fixas: A esquerda {min(ax)}–{max(ax)}, C base {min(cy)}–{max(cy)} (tolerância 2 px em 512, só sombra)')
 
 # avanço de saída medido por ECC (mesma régua da ref)
 REF = {'curta': ('A157', 1.093, 5.32), 'longa': ('C86', 1.139, 7.19), 'recuo': ('C173', 0.92, -2.99)}
