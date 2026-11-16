@@ -139,3 +139,20 @@ Curvas: `S` = aceleração e desaceleração com velocidade contínua (Hermite, 
 | Risco | papel girando parecer cartão rígido |
 | Plano B | dobrar a ponta (flexão de 6°) enquanto cai |
 | Prévia | prova C; quadros 1440–1510 |
+
+---
+
+## Poses desenhadas no Figma (Fase 2 · página `93:37`, para aprovação)
+
+| Aresta | Poses (nós) | Observação |
+|---|---|---|
+| B1 | `97:107` p0 · `97:136` saída · `97:165` conexão · `97:194` entrada · `97:224` assentamento · `97:254` = P2 · `97:280` mapa da câmera | casamento real (mesmo asset). Os fundos da P2 foram reposicionados para onde a câmera da B1 os põe (s = 1,6); Jesus e os textos da P2 não mudaram. Pela física, as pedras da frente passam só pela parte de baixo da lente e saem cedo (estão abaixo da linha de visão) |
+| B2 | `98:119` · `98:151` · `98:180` · `98:198` | oclusão pelo manto + pedra da frente (a mesma da P1) entrando por baixo |
+| B3 | `98:216` · `98:236` · `98:256` · `98:276` | mesma imagem; círculo → traço → fita |
+| B4 | `98:297` · `98:317` · `98:339` · `98:355` | corte escondido no pico do rastro (pose 2) |
+| B5 | `99:179` · `99:197` · `99:213` · `99:233` | **vertigem limitada a 220 px** (16 %): o recorte do pináculo só tem 230 px abaixo do quadro. Para os 38 % previstos, reexportar o Tissot 00.159.52 inteiro (1920 px) como peça mais alta |
+| B6 | `99:254` · `99:274` · `99:294` · `99:329` | nuvem do Kuindzhi como oclusão; cidades deitadas → em pé |
+| B7 | `99:361` · `99:394` · `99:430` · `99:471` | borda rasgada aparece; canto sobe 12 px |
+| B8 | `99:513` · `99:566` · `99:625` · `99:658` | a folha do Duccio desliza e revela o deserto (sem buraco recortado: o pedaço sai e a folha inteira desce) |
+
+Camadas de luz e escurecimento são filtros de tela: ficam paradas no quadro em todas as poses (corrigido em 27 camadas).
